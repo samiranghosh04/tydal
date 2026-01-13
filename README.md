@@ -1,50 +1,114 @@
-# Welcome to your Expo app 👋
+# Tydal
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+![Version](https://img.shields.io/badge/version-0.0.1--alpha.1-orange)
+![Status](https://img.shields.io/badge/status-alpha-red)
+![Stability](https://img.shields.io/badge/stability-unstable-red)
 
-## Get started
+An offline first, private, secure period tracking app built with Expo and React Native.
 
-1. Install dependencies
+> **PRE-RELEASE ALPHA**: This is an early development version. Features may be incomplete, unstable, or subject to breaking changes. Not recommended for production use.
 
-   ```bash
-   npm install
-   ```
+## Quick Start
 
-2. Start the app
+**Note**: This alpha version may have bugs. Backup your data before testing.
 
-   ```bash
-   npx expo start
-   ```
+For setup and installation instructions, follow the official [Expo Getting Started Guide](https://docs.expo.dev/get-started/set-up-your-environment/).
 
-In the output, you'll find options to open the app in a
+Once Expo is set up:
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+1. Clone or download this repository
+2. Run `npm install` in the project folder
+3. Run `npx expo start` to launch the development server
+4. Use Expo Go on your device to scan the QR code and test the app
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+For troubleshooting, refer to the [Expo Documentation](https://docs.expo.dev/).
 
-## Get a fresh project
+## Features
 
-When you're ready, run:
+**Password Protected** - Secure access to your personal health data  
+**Local Storage** - All data stays on your device, no cloud sync  
+**Calendar View** - Beautiful visual calendar of your period  
+**Comprehensive Logging** - Track flow, symptoms, mood, and notes  
+**Smart Symptoms** - Pre-filled symptom checklist by category  
+**Data Export** - CSV and PDF export for backup and analysis  
+**Educational Content** - Guides for first-time period users  
 
-```bash
-npm run reset-project
+## Project Structure
+
+```
+app/                      # Main app screens
+├── _layout.tsx          # Auth flow & navigation
+└── index.tsx            # Main app with tabs
+
+components/              # Reusable UI components
+├── auth-setup.tsx       # Password setup
+├── auth-login.tsx       # Login screen
+├── calendar-view.tsx    # Calendar visualization
+├── log-editor.tsx       # Period logging form
+└── education-tab.tsx    # Educational content
+
+lib/                      # Business logic
+├── data-service.ts      # Database operations
+└── export-service.ts    # CSV/PDF export
+
+scripts/
+└── db.ts                # Database & auth setup
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Tech Stack
 
-## Learn more
+- **Framework**: Expo & React Native  
+- **Language**: TypeScript  
+- **Database**: SQLite  
+- **Security**: bcryptjs + Secure Store  
+- **Navigation**: React Navigation  
 
-To learn more about developing your project with Expo, look at the following resources:
+## How It Works
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+1. **Setup**: Create a password on first launch
+2. **Login**: Password-protected app access
+3. **Track**: Log your period with flow, symptoms, mood, notes
+4. **Visualize**: View your cycle on an interactive calendar
+5. **Export**: Download data as CSV or PDF
 
-## Join the community
+## Security
 
-Join our community of developers creating universal apps.
+- All data stored locally on device
+- Password hashed with bcryptjs
+- No server communication
+- No tracking or analytics
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## Development Status
+
+**🚧 This is a pre-release alpha version (0.0.1-alpha.1)**
+
+- **Breaking Changes Expected**: APIs, UI, and features may change significantly between releases.
+- **Not Production Ready**: Use at your own risk for testing and feedback only.
+- **Bug Reports Welcome**: Please report issues via [GitHub Issues](https://github.com/samiranghosh04/tydal/issues).
+- **Contributing**: Help improve stability by contributing fixes or features.
+
+Future enhancements planned:
+
+- Database encryption
+- Screenshot prevention
+- Session timeout
+- Enhanced biometric security
+- Predictions
+- Notifications
+
+## Documentation
+
+A comprehensive feature documentation site in works right now.
+
+See [CHANGELOG.md](./CHANGELOG.md) for version history and release notes.
+
+## Contributing
+
+We welcome contributions! Please read our [Contributing Guide](./CONTRIBUTING.md) and [Code of Conduct](./CODE_OF_CONDUCT.md).
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details
+---
+
+Built with ❤️ for period health awareness and privacy.
